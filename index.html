@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <title>MUELLER GRID SYSTEM</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="shortcut icon" href="images/favicon.png" type="image/png" /> -->
+    <link href="stylesheets/grid/output.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="">
+    <div id="wrapper">
+        <div class="g-all-c">
+            <p>Some examples of what you can do with MUELLER.<br />
+            Please note that you need to write your own layouts and fractional grid classes.</p>
+            <section id="examples" class="g-all-full">
+                <h1>Media</h1>
+                <article id="example_media" class="g-d-24 g-tp-12 g-hl-6 g-h-6">
+                    <p>
+                        Defining Columns with basic media-classes<br />
+                        The class&ndash;names are changed with visibility&ndash;selectors.
+                    </p>
+                    <div class="g-d-6 g-tp-3 g-hl-2 g-h-2">
+                        <div class="box">
+                            <p class="d-show l-show">g-d-6</p>
+                            <p class="tp-show">g-tp-3</p>
+                            <p class="hl-show">g-hl-2</p>
+                            <p class="h-show">g-h-2</p>
+                        </div>
+                    </div>
+                    <div class="g-d-6 g-tp-3 g-hl-2 g-h-2">
+                        <div class="box">
+                            <p class="d-show l-show">g-d-6</p>
+                            <p class="tp-show">g-tp-3</p>
+                            <p class="hl-show">g-hl-2</p>
+                            <p class="h-show">g-h-2</p>
+                        </div>
+                    </div>
+                    <div class="g-d-12 g-d-l g-tp-6 g-tp-l g-hl-2 g-hl-l g-h-2 g-h-l">
+                        <div class="box">
+                            <p class="d-show l-show">g-d-12</p>
+                            <p class="tp-show">g-tp-6</p>
+                            <p class="hl-show">g-hl-2</p>
+                            <p class="h-show">g-h-2</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <h1>Layouts</h1>
+                <article id="example_layout_1" class="l-1c">
+                    <p>1-column layout</p>
+                    <div class="c-1">
+                        <div class="box">
+                            <p>c1</p>
+                        </div>
+                    </div>
+                </article>
+                <article id="example_layout_2" class="l-2c">
+                    <p>2-column layout</p>
+                    <div class="c-1">
+                        <div class="box">
+                            <p>c1</p>
+                        </div>
+                    </div>
+                    <div class="c-2">
+                        <div class="box">
+                            <p>c2</p>
+                        </div>
+                    </div>
+                </article>
+                <article id="example_layout_3" class="l-2cr">
+                    <p>2-column layout, switched columns</p>
+                    <div class="c-1">
+                        <div class="box">
+                            <p>c1</p>
+                        </div>
+                    </div>
+                    <div class="c-2">
+                        <div class="box">
+                            <p>c2</p>
+                        </div>
+                    </div>
+                </article>
+                <article id="example_layout_4" class="l-3c">
+                    <p>3-column layout</p>
+                    <div class="c-1">
+                        <div class="box">
+                            <p>c1</p>
+                        </div>
+                    </div>
+                    <div class="c-2">
+                        <div class="box">
+                            <p>c2</p>
+                        </div>
+                    </div>
+                    <div class="c-3">
+                        <div class="box">
+                            <p>c3</p>
+                        </div>
+                    </div>
+                </article>
+                <article id="example_layout_5" class="l-4c">
+                    <p>
+                        4-column layout<br />
+                        Note the shift with desktop, portrait & handheld.
+                    </p>
+                    <div class="c-1">
+                        <div class="box">
+                            <p>c1</p>
+                        </div>
+                    </div>
+                    <div class="c-2">
+                        <div class="box">
+                            <p>c2</p>
+                        </div>
+                    </div>
+                    <div class="c-3">
+                        <div class="box">
+                            <p>c3</p>
+                        </div>
+                    </div>
+                    <div class="c-4">
+                        <div class="box">
+                            <p>c4</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <h1>Fractional Grid Classes</h1>
+                <article id="example_invariant_1" class="l-1c">
+                    <p>1-column layout with half-invariants</p>
+                    <div class="c-1">
+                        <div class="g-all-half g-all-f">
+                            <div class="box">
+                                <p>g-all-half</p>
+                            </div>
+                        </div>
+                        <div class="g-all-half g-all-l">
+                            <div class="box">
+                                <p>g-all-half</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article id="example_invariant_2" class="l-1c">
+                    <p>1-column layout with thirds-invariants</p>
+                    <div class="c-1">
+                        <div class="g-all-thirds g-all-f">
+                            <div class="box">
+                                <p>g-all-thirds</p>
+                            </div>
+                        </div>
+                        <div class="g-all-thirds">
+                            <div class="box">
+                                <p>g-all-thirds</p>
+                            </div>
+                        </div>
+                        <div class="g-all-thirds g-all-l">
+                            <div class="box">
+                                <p>g-all-thirds</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
