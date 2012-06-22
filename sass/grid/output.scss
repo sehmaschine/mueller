@@ -8,14 +8,14 @@
 // imports all necessary partials
 // remove partials which are not needed
 // remove sub-partials in _media, _layouts, 
-// _invariants & _templates
+// _fractions & _templates
 //
 // **************************************************
 
 @import "grid-system";
 @import "media";
 @import "layouts";
-@import "invariants";
+@import "fractions";
 
 // Uncomment this if you want crazy selector bloat.
 // see http://chriseppstein.github.com/blog/2011/08/21/responsive-layouts-with-sass/
