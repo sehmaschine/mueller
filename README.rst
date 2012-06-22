@@ -78,7 +78,8 @@ The semantic way &mdash; add templates instead of using presentational classes i
 Examples
 ========
 
-see index.html
+see index.html and `www.muellergridsystem.com <http://www.muellergridsystem.com>`_.
+
 
 Practice
 ========
