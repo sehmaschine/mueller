@@ -29,7 +29,7 @@ Layouts
 
 Extend your media-grids to pre-defined layouts (e.g. a 2-column layout with switched columns)::
 
-	.l-2c {
+    .l-2c {
         @extend .g-d-24;
         @extend .g-tp-12;
         @extend .g-h-6;
@@ -50,7 +50,7 @@ Fractions
 
 On top of grids and layouts, add fractional classes (e.g. all-half, all-thirds, all-1of3)::
 
-	.g-all-half {
+    .g-all-half {
         .l-1c .c-1 & {
                     @extend .g-d-12;
                     @extend .g-tp-6;
@@ -63,7 +63,7 @@ Templates
 
 The semantic way &mdash; add templates instead of using presentational classes in your markup::
 
-	.template-1 {
+    .template-1 {
         #page {
                     @extend .l-2c;
         }
