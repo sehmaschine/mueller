@@ -25,7 +25,7 @@
     $gm: 5%; // grid margin
   
     .g-h-c {
-        @extend .g-base-c;
+        @include container;
         width: $gw*$gc+$gm*($gc - 1); // 300px
     }
     

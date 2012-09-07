@@ -22,7 +22,7 @@ $gw: 20px; // grid width
 $gm: 20px; // grid margin
 
 .g-d-c {
-    @extend .g-base-c;
+    @include container;
     width: $gw*$gc+$gm*($gc - 1);
 }
 
