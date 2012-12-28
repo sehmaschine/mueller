@@ -1,4 +1,4 @@
-// **************************************************
+// ******************************************************************************************************
 //
 // MUELLER
 // modular grid system
@@ -7,16 +7,12 @@
 //
 // imports all necessary partials
 // remove partials which are not needed
-// remove sub-partials in _media, _layouts, 
-// _fractions & _templates
+// remove sub-partials in _media, _layouts, _fractions & _templates
 //
-// **************************************************
+// ******************************************************************************************************
 
 @import "grid-system";
 @import "media";
-// @import "media/media-all";
-// @import "media/media-desktop";
-// @import "media/media-large";
 @import "layouts";
 @import "fractions";
 

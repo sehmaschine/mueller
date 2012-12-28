@@ -1,4 +1,4 @@
-// **************************************************
+// ******************************************************************************************************
 //
 // MUELLER
 // modular grid system
@@ -7,7 +7,7 @@
 //
 // helper classes
 //
-// **************************************************
+// ******************************************************************************************************
 
 .g-base-c {
     @include container;
@@ -15,6 +15,7 @@
 
 .g-all-c {
     @extend .g-d-c;
+    @extend .g-hr-c;
     @extend .g-l-c;
     @extend .g-tp-c;
     @extend .g-hl-c;
@@ -23,6 +24,8 @@
 
 .g-all-f {
     @extend .g-d-f;
+    @extend .g-hr-f;
+    @extend .g-l-f;
     @extend .g-tp-f;
     @extend .g-hl-f;
     @extend .g-h-f;
@@ -30,6 +33,8 @@
 
 .g-all-l {
     @extend .g-d-l;
+    @extend .g-hr-l;
+    @extend .g-l-l;
     @extend .g-tp-l;
     @extend .g-hl-l;
     @extend .g-h-l;

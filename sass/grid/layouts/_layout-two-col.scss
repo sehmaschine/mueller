@@ -11,6 +11,8 @@
 
 .l-2c {
     @extend .g-d-24;
+    @extend .g-hr-24;
+    @extend .g-l-24;
     @extend .g-tp-12;
     @extend .g-hl-6;
     @extend .g-h-6;
@@ -18,6 +20,10 @@
     .c-1 {
         @extend .g-d-16;
         @extend .g-d-f;
+        @extend .g-hr-16;
+        @extend .g-hr-f;
+        @extend .g-l-16;
+        @extend .g-l-f;
         @extend .g-tp-8;
         @extend .g-tp-f;
         @extend .g-hl-4;
@@ -29,6 +35,10 @@
     .c-2 {
         @extend .g-d-8;
         @extend .g-d-l;
+        @extend .g-hr-8;
+        @extend .g-hr-l;
+        @extend .g-l-8;
+        @extend .g-l-l;
         @extend .g-tp-4;
         @extend .g-tp-l;
         @extend .g-hl-2;
@@ -41,6 +51,8 @@
 // switched columns
 .l-2cr {
     @extend .g-d-24;
+    @extend .g-hr-24;
+    @extend .g-l-24;
     @extend .g-tp-12;
     @extend .g-hl-6;
     @extend .g-h-6;
@@ -49,6 +61,12 @@
         @extend .g-d-16;
         @extend .g-d-f;
         @extend .g-d-push8;
+        @extend .g-hr-16;
+        @extend .g-hr-f;
+        @extend .g-hr-push8;
+        @extend .g-l-16;
+        @extend .g-l-f;
+        @extend .g-l-push8;
         @extend .g-tp-8;
         @extend .g-tp-f;
         @extend .g-tp-push4;
@@ -64,6 +82,12 @@
         @extend .g-d-8;
         @extend .g-d-l;
         @extend .g-d-pull16;
+        @extend .g-hr-8;
+        @extend .g-hr-l;
+        @extend .g-hr-pull16;
+        @extend .g-l-8;
+        @extend .g-l-l;
+        @extend .g-l-pull16;
         @extend .g-tp-4;
         @extend .g-tp-l;
         @extend .g-tp-pull8;

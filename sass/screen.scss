@@ -1,11 +1,16 @@
-// **************************************************
+// ******************************************************************************************************
 //
 // MUELLER
 // modular grid system
 //
 // _screen.scss
 //
-// **************************************************
+// ******************************************************************************************************
+
+
+
+// ------------------------------------------------------------------------------------------------------
+// IMPORTS & VARIABLES
 
 @import "blueprint/reset";
 @import "partials/base";
@@ -15,10 +20,34 @@
 @import "partials/handheld";
 @import "partials/handheld-landscape";
 
+@import "compass";
 @import "compass/typography/vertical_rhythm";
 @import "compass/css3/border-radius";
 @import "compass/utilities/general/clearfix";
 
+
+
+// ------------------------------------------------------------------------------------------------------
+// PAGE STYLES
+
+#mueller-indicators {
+    position: fixed;
+    top: 0;
+    left: 0;
+    p {
+        margin: 0 0 2px;
+        padding: 0.25em 1em;
+        font-size: 11px;
+        font-weight: bold;
+        color: #fff;
+        @include border-bottom-right-radius(4px);
+        background: $text-color;
+        @include opacity(.4);
+     }
+}
+.hr-show, .l-show, .d-show, .h-show, .hp-show, .hl-show, .t-show, .tp-show, .tl-show {
+    display: none;
+}
 
 body {
     font-family: $font-family;

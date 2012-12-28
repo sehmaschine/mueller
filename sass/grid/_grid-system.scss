@@ -1,4 +1,4 @@
-// **************************************************
+// ******************************************************************************************************
 //
 // MUELLER
 // modular grid system
@@ -7,9 +7,11 @@
 //
 // the basic grid implementation
 //
-// **************************************************
+// ******************************************************************************************************
 
-// **************************************************
+
+
+// ------------------------------------------------------------------------------------------------------
 // IMPORTS & VARIABLES
 
 @import "compass/utilities/general/clearfix";
@@ -17,7 +19,9 @@
 $float-direction: left;
 $show-grid-background: false;
 
-// **************************************************
+
+
+// ------------------------------------------------------------------------------------------------------
 // GENERAL MIXINS
 
 @mixin centered {
@@ -28,37 +32,40 @@ $show-grid-background: false;
     float: $side;
 }
 
-// **************************************************
+
+
+// ------------------------------------------------------------------------------------------------------
 // THE GRID SYSTEM
 
-// The width of a column given the units and unit width of the grid.
+// the width of a column given the units and unit width of the grid.
 @function column-width($n, $col-width, $gutter-width: $gutter-width) {
     @return $col-width * $n + $gutter-width * ($n - 1);
 }
 
-// A grid container. Unlike most grid containers,
-// this one does not have a width. That is assigned
-// on a per-media basis.
+// a grid container. unlike most grid containers, this one does not have a width. that is assigned on a per-media basis.
 @mixin container {
     @include centered;
     @include pie-clearfix;
 }
 
-// The basic structure for a column aligned to a grid.
+// the basic structure for a column aligned to a grid.
 @mixin column-base {
     @include floated; // make this column floated to the left
     @include pie-clearfix;
 }
 
-// Generates the base classes needed for a grid system
+// generates the base classes needed for a grid system
 @mixin grid-base($gutter-width, $base-class: grid-column, $first-column-class: g-all-f, $last-column-class: g-all-l) {
-    .#{$base-class} {
-        @include column-base;
-    }
+    // .#{$base-class} {
+    //     @include column-base;
+    // }
     .#{$first-column-class} {
-        margin-left: 0 !important;
-        margin-right: $gutter-width !important; // needed to overwrite last with first
+        margin-left: 0;
+        margin-right: $gutter-width; // needed to overwrite last with first
         clear: left;
+    }
+    .g-#{$default-class}-l {
+        margin-right: $gutter-width !important;
     }
     .#{$last-column-class} {
         margin-right: 0 !important;
@@ -79,7 +86,8 @@ $show-grid-background: false;
     position: relative;
     margin-left: $n*($col-width+$gutter-width) !important;
     margin-right: -$n*($col-width+$gutter-width) !important;
-    margin-top: 0; margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 // add $n grid units worth of space to the left of a column
@@ -89,8 +97,8 @@ $show-grid-background: false;
 }
 
 
-// Generates the columns
-@mixin column($n, $max-unit, $col-width, $gutter-width, $first-column-class: false, $last-column-class: false) {
+// generates the columns
+@mixin column($n, $max-unit, $col-width, $gutter-width, $first-column-class, $last-column-class) {
     @include column-base;
     @if $n == $max-unit {
         margin-left: 0 !important;
@@ -100,22 +108,21 @@ $show-grid-background: false;
         margin-right: $gutter-width;
     }
     width: column-width($n, $col-width, $gutter-width);
+    clear: none;
 }
 
-// Generate grid classes according to a common naming convention
-// $media is the media prefix. E.g. d (deskotop), t (tablet), tp (tablet portrait), h (handheld), or hl (handheld landscape)
+// generate grid classes according to a common naming convention
+// $media is the media prefix. E.g. d (default), t (tablet), tp (tablet portrait), h (handheld), or hl (handheld landscape)
 // $max-unit is how many columns are in this grid system.
 // $col-width is the width of a column.
 // $gutter-width is the width of a gutter (margin-right).
-// The column base class and gutter removal class names are derived
+// the column base class and gutter removal class names are derived
 // from the prefix, but can be overridden.
 @mixin grids($media, $units, $max-unit, $col-width, $gutter-width,
             $pad-units: 0 1 2 3 4 5 6 7 8 0 10 11 12,
             $base-class: "g-#{$media}",
             $first-column-class: "g-#{$media}-f",
             $last-column-class: "g-#{$media}-l") {
-    // establish the base classes
-    @include grid-base($gutter-width, $base-class, $first-column-class, $last-column-class);
     // generate padding classes
     @each $n in $pad-units {
         .g-#{$media}-prepend#{$n} {
@@ -137,4 +144,6 @@ $show-grid-background: false;
             @include column($n, $max-unit, $col-width, $gutter-width, $first-column-class, $last-column-class);
         }
     }
+    // establish the base classes
+    @include grid-base($gutter-width, $base-class, $first-column-class, $last-column-class);   
 }

@@ -1,17 +1,20 @@
-// **************************************************
+// ******************************************************************************************************
 //
 // MUELLER
 // modular grid system
 //
 // _media.scss
 //
+// sets the default classes
 // imports all necessary media partials
 //
-// **************************************************
+// ******************************************************************************************************
 
-@import "media/media-desktop";
+@import "media/media-default";
+
+@import "media/media-all";
+@import "media/media-hi-res";
 @import "media/media-large";
 @import "media/media-tablet-portrait";
 @import "media/media-handheld-landscape";
 @import "media/media-handheld";
-@import "media/media-all";

@@ -1,0 +1,100 @@
+// **************************************************
+//
+// MUELLER
+// modular grid system
+//
+// _layout-four-col.scss
+//
+// Example of a 4 column layout
+//
+// **************************************************
+
+.l-test {
+    @extend .g-d-24;
+    @extend .g-hr-24;
+    @extend .g-l-24;
+    @extend .g-tp-12;
+    @extend .g-hl-6;
+    @extend .g-h-6;
+    // Column 1
+    .alpha {
+        @extend .g-d-12;
+        @extend .g-d-f;
+        @extend .g-hr-4;
+        @extend .g-hr-f;
+        @extend .g-l-6;
+        @extend .g-l-f;
+        @extend .g-tp-6;
+        @extend .g-tp-f;
+        @extend .g-hl-6;
+        @extend .g-hl-f;
+        @extend .g-h-3;
+        @extend .g-h-f;
+    }
+    // Column 2
+    .beta {
+        @extend .g-d-12;
+        @extend .g-d-l;
+        @extend .g-hr-4;
+        @extend .g-l-6;
+        @extend .g-tp-6;
+        @extend .g-tp-l;
+        @extend .g-hl-6;
+        @extend .g-hl-l;
+        @extend .g-h-3;
+        @extend .g-h-l;
+    }
+    // Column 3
+    .gamma {
+        @extend .g-d-12;
+        @extend .g-hr-4;
+        @extend .g-l-6;
+        @extend .g-tp-12;
+        @extend .g-tp-l;
+        @extend .g-hl-3;
+        @extend .g-hl-f;
+        @extend .g-h-6;
+    }
+    // Column 4
+    .delta {
+        @extend .g-d-12;
+        @extend .g-d-l;
+        @extend .g-hr-4;
+        @extend .g-l-6;
+        @extend .g-l-l;
+        @extend .g-tp-12;
+        @extend .g-tp-l;
+        @extend .g-hl-3;
+        @extend .g-hl-l;
+        @extend .g-h-6;
+    }
+    // Column 5
+    .epsilon {
+        @extend .g-d-12;
+        @extend .g-d-f;
+        @extend .g-hr-4;
+        @extend .g-l-12;
+        @extend .g-l-f;
+        @extend .g-tp-6;
+        @extend .g-tp-f;
+        @extend .g-hl-3;
+        @extend .g-hl-f;
+        @extend .g-h-3;
+        @extend .g-h-f;
+    }
+    // Column 6
+    .zeta {
+        @extend .g-d-12;
+        @extend .g-d-l;
+        @extend .g-hr-4;
+        @extend .g-hr-l;
+        @extend .g-l-12;
+        @extend .g-l-l;
+        @extend .g-tp-6;
+        @extend .g-tp-l;
+        @extend .g-hl-3;
+        @extend .g-hl-l;
+        @extend .g-h-3;
+        @extend .g-h-l;
+    }
+}

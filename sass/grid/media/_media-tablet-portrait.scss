@@ -1,4 +1,4 @@
-// **************************************************
+// ******************************************************************************************************
 //
 // MUELLER
 // modular grid system
@@ -7,49 +7,64 @@
 //
 // >768px, <980px
 //
-// **************************************************
+// ******************************************************************************************************
 
-// if you need to change the vertical rhythm
-// @import "compass/typography/vertical_rhythm";
 
-@media screen and (min-width: 768px) and (max-width: 980px) {
 
-    // baseline: if you need to change the vertical rhythm
-    // $relative-font-sizing: false;
-    // $base-font-size: 16px;
-    // $base-line-height: 24px;
-    // @include establish-baseline(14px);
+// ------------------------------------------------------------------------------------------------------
+// SET THE MEDIA-SPECIFIC GRID VARIABLES
 
-    $gc: 12; // grid columns
-    $gw: 40px; // grid width
-    $gm: 20px; // grid margin
+// define the media-query
+$media-min-width                : 768px;
+$media-max-width                : 980px;
+
+@media screen and (min-width: $media-min-width) and (max-width: $media-max-width) {
     
-    .g-tp-c {
+    // define the media-specific baseline settings
+    @import "compass/typography/vertical_rhythm";
+    $relative-font-sizing       : false;
+    $base-font-size             : 16px;
+    $base-line-height           : 24px;
+    @include establish-baseline(14px);
+
+    // define the media-specific grid settings
+    $media                      : tp; // media-specific shortcut, e.g. "tp" for ".g-tp-#"
+    $max-units                  : 12; // number of columns
+    $col-width                  : 40px; // column width
+    $gutter-width               : 20px;  // gutter width
+    $units                      : 0 1 2 3 4 5 6 7 8 9 10 11 12; // only add the columns you really need
+    $pad-units                  : 0 1 2 3 4 5 6 7 8 9 10 11 12; // only add the pad-units you really need to push/pull/append/prepend
+
+
+
+// ------------------------------------------------------------------------------------------------------
+// GENERATE THE GRID CLASSES
+
+    // calculate the width of the media-specific container
+    .g-#{$media}-c {
         @include container;
-        width: $gw*$gc+$gm*($gc - 1); // 700px
+        width: $col-width*$max-units+$gutter-width*($max-units - 1);
     }
-    
-    @include grids(tp,
-        0 1 2 3 4 5 6 7 8 9 10 11 12, // only add the columns you really need
-        $gc,
-        $gw,
-        $gm,
-        0 1 2 3 4 5 6 7 8 9 10 11 12); // only add the pad-units you really need to push/pull/append/prepend
 
-    // visibility (l,d,t/tp/tl,h/hp/hl)
-    .d-show, .dl-show, .h-show, .hp-show, .hl-show, .tl-show {
+    // let the media-specific grid-classes being rendered
+    @include grids($media, $units, $max-units, $col-width, $gutter-width, $pad-units);
+
+
+
+// ------------------------------------------------------------------------------------------------------
+// OTHER MEDIA-SPECIFIC STYLES
+
+    // behaviour of show/hide classes
+    .#{$media}-hide, 
+    .#{$default-class}-show {
         display: none !important;
     }
-    .tp-hide {
-        display: none !important;
-    }
-    .tp-show {
+    .#{$media}-show {
         display: block !important;
     }
     #{elements-of-type(inline)} {
-        &.tp-show {
+        &.#{$media}-show {
             display: inline !important;
         }
     }
-
 }
