@@ -9,8 +9,6 @@
 //
 // ******************************************************************************************************
 
-
-
 // ------------------------------------------------------------------------------------------------------
 // IMPORTS & VARIABLES
 
@@ -18,8 +16,6 @@
 
 $float-direction: left;
 $show-grid-background: false;
-
-
 
 // ------------------------------------------------------------------------------------------------------
 // GENERAL MIXINS
@@ -31,8 +27,6 @@ $show-grid-background: false;
 @mixin floated($side: $float-direction) {
     float: $side;
 }
-
-
 
 // ------------------------------------------------------------------------------------------------------
 // THE GRID SYSTEM
@@ -95,7 +89,6 @@ $show-grid-background: false;
     position: relative;
     margin-left: -$n*($col-width+$gutter-width) + $gutter-width !important;
 }
-
 
 // generates the columns
 @mixin column($n, $max-unit, $col-width, $gutter-width, $first-column-class, $last-column-class) {

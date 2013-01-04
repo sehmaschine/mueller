@@ -9,8 +9,6 @@
 //
 // ******************************************************************************************************
 
-
-
 // ------------------------------------------------------------------------------------------------------
 // SET THE MEDIA-SPECIFIC GRID VARIABLES
 
@@ -35,8 +33,6 @@ $media-max-width                : 479px;
     $units                      : 0 1 2 3 4 6; // only add the columns you really need
     $pad-units                  : 0 1 2 3 4 6; // only add the pad-units you really need to push/pull/append/prepend
 
-
-
 // ------------------------------------------------------------------------------------------------------
 // GENERATE THE GRID CLASSES
 
@@ -48,8 +44,6 @@ $media-max-width                : 479px;
 
     // let the media-specific grid-classes being rendered
     @include grids($media, $units, $max-units, $col-width, $gutter-width, $pad-units);
-
-
 
 // ------------------------------------------------------------------------------------------------------
 // OTHER MEDIA-SPECIFIC STYLES

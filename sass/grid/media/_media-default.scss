@@ -9,8 +9,6 @@
 //
 // ******************************************************************************************************
 
-
-
 // ------------------------------------------------------------------------------------------------------
 // SET THE DEFAULT GRID VARIABLES
 
@@ -29,8 +27,6 @@ $gutter-width               : 20px;  // Ggutter width
 $units                      : 0 2 4 6 8 10 12 14 16 18 24; // only add the columns you really need
 $pad-units                  : 0 2 4 6 8 10 12 14 16 18 24; // only add the pad-units you really need to push/pull/append/prepend
 
-
-
 // ------------------------------------------------------------------------------------------------------
 // GENERATE THE GRID CLASSES
 
@@ -42,8 +38,6 @@ $pad-units                  : 0 2 4 6 8 10 12 14 16 18 24; // only add the pad-u
 
 // let the default grid-classes being rendered
 @include grids($default-class, $units, $max-units, $col-width, $gutter-width, $pad-units);
-
-
 
 // ------------------------------------------------------------------------------------------------------
 // OTHER DEFAULT STYLES
