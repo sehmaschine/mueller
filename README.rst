@@ -18,11 +18,11 @@ Media
 One default grid and (if needed) different per-media grids (e.g. large, tablet, handheld)::
 
     @include grids(d,
-        0 2 4 6 8 12 16 18 24,
         24,
         20px,
         20px,
-        0 2 4 6 8 12 16 18 24,);
+        0 2 3 4 6 8 12 16 24,
+        0 2 4 6 8 12);
 
 Layouts
 -------
@@ -31,17 +31,20 @@ Extend your media-grids to pre-defined layouts (e.g. a 2-column layout with swit
 
     .l-2c {
         @extend .g-d-24;
+        @extend .g-l-24;
         @extend .g-tp-12;
         @extend .g-h-6;
         .c-1 {
-                    @extend .g-d-12;
-                    @extend .g-tp-6;
-                    @extend .g-h-3;
+            @extend .g-d-12;
+            @extend .g-l-12;
+            @extend .g-tp-6;
+            @extend .g-h-3;
         }
         .c-2 {
-                    @extend .g-d-12;
-                    @extend .g-tp-6;
-                    @extend .g-h-3;
+            @extend .g-d-12;
+            @extend .g-l-12;
+            @extend .g-tp-6;
+            @extend .g-h-3;
         }
     }
 
@@ -52,9 +55,10 @@ On top of grids and layouts, add fractional classes (e.g. all-half, all-thirds, 
 
     .g-all-half {
         .l-1c .c-1 & {
-                    @extend .g-d-12;
-                    @extend .g-tp-6;
-                    @extend .g-h-3;
+            @extend .g-d-12;
+            @extend .g-l-12;
+            @extend .g-tp-6;
+            @extend .g-h-3;
         }
     }
 
@@ -65,13 +69,13 @@ The semantic way &mdash; add templates instead of using presentational classes i
 
     .template-1 {
         #page {
-                    @extend .l-2c;
+            @extend .l-2c;
         }
         #content {
-                    @extend .c-1;
+            @extend .c-1;
         }
         #sidebar {
-                    @extend .c-2;
+            @extend .c-2;
         }
     }
 
