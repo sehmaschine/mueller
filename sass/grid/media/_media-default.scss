@@ -48,6 +48,20 @@ $pad-units                  : 0 2 4 6 8 10 12 14 16 18 24; // only add the pad-u
 // ------------------------------------------------------------------------------------------------------
 // OTHER DEFAULT STYLES
 
+// basically show all hide-classes
+*[class$="hide"] {
+    display: block;
+}
+#{elements-of-type(inline)} {
+    &[class$="hide"] {
+        display: inline;
+    }
+}
+// basically hide all show-classes
+*[class$="show"] {
+    display: none;
+}
+
 // behaviour of show/hide classes
 .#{$default-class}-hide {
     display: none !important;

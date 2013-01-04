@@ -59,11 +59,16 @@ $media-max-width                : 1800px;
     .#{$default-class}-show {
         display: none !important;
     }
-    .#{$media}-show {
+    .#{$media}-show, 
+    .#{$default-class}-hide {
         display: block !important;
     }
     #{elements-of-type(inline)} {
-        &.#{$media}-show {
+        &.#{$default-class}-show {
+            display: none !important;
+        }
+        &.#{$media}-show, 
+        &.#{$default-class}-hide {
             display: inline !important;
         }
     }

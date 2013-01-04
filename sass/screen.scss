@@ -45,9 +45,6 @@
         @include opacity(.4);
      }
 }
-.hr-show, .l-show, .d-show, .h-show, .hp-show, .hl-show, .t-show, .tp-show, .tl-show {
-    display: none;
-}
 
 body {
     font-family: $font-family;
