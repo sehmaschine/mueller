@@ -99,9 +99,9 @@ $show-grid-background: false;
         clear: both;
     } @else {
         margin-right: $gutter-width;
+        clear: none;
     }
     width: column-width($n, $col-width, $gutter-width);
-    clear: none;
 }
 
 // generate grid classes according to a common naming convention
