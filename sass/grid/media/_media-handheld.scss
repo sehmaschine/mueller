@@ -13,11 +13,11 @@
 // SET THE MEDIA-SPECIFIC GRID VARIABLES
 
 // define the media-query
-$media-min-width                : 0px;
+$media-min-width                : 0;
 $media-max-width                : 479px;
 
 @media screen and (min-width: $media-min-width) and (max-width: $media-max-width) {
-    
+
     // define the media-specific baseline settings
     @import "compass/typography/vertical_rhythm";
     $relative-font-sizing       : false;
@@ -54,11 +54,11 @@ $media-max-width                : 479px;
     }
 
     // behaviour of show/hide classes
-    .#{$media}-hide, 
+    .#{$media}-hide,
     .#{$default-class}-show {
         display: none !important;
     }
-    .#{$media}-show, 
+    .#{$media}-show,
     .#{$default-class}-hide {
         display: block !important;
     }
@@ -66,7 +66,7 @@ $media-max-width                : 479px;
         &.#{$default-class}-show {
             display: none !important;
         }
-        &.#{$media}-show, 
+        &.#{$media}-show,
         &.#{$default-class}-hide {
             display: inline !important;
         }
