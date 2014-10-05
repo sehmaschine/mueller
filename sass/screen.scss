@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------------------------------
 // IMPORTS & VARIABLES
 
-@import "blueprint/reset";
+@import "compass/reset";
 @import "partials/base";
 @import "partials/default";
 @import "partials/large";
@@ -19,9 +19,6 @@
 @import "partials/handheld-landscape";
 
 @import "compass";
-@import "compass/typography/vertical_rhythm";
-@import "compass/css3/border-radius";
-@import "compass/utilities/general/clearfix";
 
 // ------------------------------------------------------------------------------------------------------
 // PAGE STYLES

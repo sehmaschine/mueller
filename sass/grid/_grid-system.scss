@@ -99,9 +99,9 @@ $show-grid-background: false;
         clear: both;
     } @else {
         margin-right: $gutter-width;
+        clear: none;
     }
     width: column-width($n, $col-width, $gutter-width);
-    clear: none;
 }
 
 // generate grid classes according to a common naming convention
@@ -112,7 +112,7 @@ $show-grid-background: false;
 // the column base class and gutter removal class names are derived
 // from the prefix, but can be overridden.
 @mixin grids($media, $units, $max-unit, $col-width, $gutter-width,
-            $pad-units: 0 1 2 3 4 5 6 7 8 0 10 11 12,
+            $pad-units: 0 1 2 3 4 5 6 7 8 9 10 11 12,
             $base-class: "g-#{$media}",
             $first-column-class: "g-#{$media}-f",
             $last-column-class: "g-#{$media}-l") {
