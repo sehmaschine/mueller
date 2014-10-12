@@ -1,0 +1,26 @@
+{
+  "name": "mueller",
+  "version": "1.2.0",
+  "homepage": "http://muellergridsystem.com",
+  "authors": [
+    "Patrick Kranzlmueller <sehmaschine@gmail.com>"
+  ],
+  "description": "MUELLER is a modular grid system for responsive/adaptive and non-responsive layouts, based on Compass. You have full control over column width, gutter width, baseline grid and media-queries.",
+  "main": "stylesheets/_mueller.scss",
+  "keywords": [
+    "modular",
+    "grid",
+    "system",
+    "responsive",
+    "compass",
+    "sass"
+  ],
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
