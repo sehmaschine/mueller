@@ -1,4 +1,4 @@
-// ******************************************************************************************************
+// *****************************************************************************
 //
 // MUELLER
 // modular grid system
@@ -7,58 +7,56 @@
 //
 // <479px: fluid grid
 //
-// ******************************************************************************************************
+// *****************************************************************************
 
-// ------------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // SET THE MEDIA-SPECIFIC GRID VARIABLES
 
 // define the media-query
-$media-min-width                : 0;
-$media-max-width                : 479px;
+$media-min-width: 0;
+$media-max-width: 479px;
 
 @media screen and (min-width: $media-min-width) and (max-width: $media-max-width) {
-    
     // define the media-specific baseline settings
     @import "compass/typography/vertical_rhythm";
-    $relative-font-sizing       : false;
-    $base-font-size             : 16px;
-    $base-line-height           : 24px;
+    $relative-font-sizing: false;
+    $base-font-size: 16px;
+    $base-line-height: 24px;
     @include establish-baseline(14px);
-
     // define the media-specific grid settings
-    $media                      : h; // media-specific shortcut, e.g. "h" for ".g-h-#"
-    $max-units                  : 6; // number of columns
-    $col-width                  : 12.5%; // column width
-    $gutter-width               : 5%;  // gutter width
-    $units                      : 0 1 2 3 4 6; // only add the columns you really need
-    $pad-units                  : 0 1 2 3 4 6; // only add the pad-units you really need to push/pull/append/prepend
-
-// ------------------------------------------------------------------------------------------------------
-// GENERATE THE GRID CLASSES
-
+    $media: h;
+    // media-specific shortcut, e.g. "h" for ".g-h-#"
+    $max-units: 6;
+    // number of columns
+    $col-width: 12.5%;
+    // column width
+    $gutter-width: 5%;
+    // gutter width
+    $units: 0 1 2 3 4 6;
+    // only add the columns you really need
+    $pad-units: 0 1 2 3 4 6;
+    // only add the pad-units you really need to push/pull/append/prepend
+    // -----------------------------------------------------------------------------
+    // GENERATE THE GRID CLASSES
     // calculate the width of the media-specific container
     .g-#{$media}-c {
         @include container;
-        width: $col-width*$max-units+$gutter-width*($max-units - 1);
+        width: $col-width * $max-units + $gutter-width * ($max-units - 1);
     }
-
     // let the media-specific grid-classes being rendered
     @include grids($media, $units, $max-units, $col-width, $gutter-width, $pad-units);
-
-// ------------------------------------------------------------------------------------------------------
-// OTHER MEDIA-SPECIFIC STYLES
-
+    // -----------------------------------------------------------------------------
+    // OTHER MEDIA-SPECIFIC STYLES
     // fix for font-size adjustment with iphone horizontal
     html {
         -webkit-text-size-adjust: none;
     }
-
     // behaviour of show/hide classes
-    .#{$media}-hide, 
+    .#{$media}-hide,
     .#{$default-class}-show {
         display: none !important;
     }
-    .#{$media}-show, 
+    .#{$media}-show,
     .#{$default-class}-hide {
         display: block !important;
     }
@@ -66,7 +64,7 @@ $media-max-width                : 479px;
         &.#{$default-class}-show {
             display: none !important;
         }
-        &.#{$media}-show, 
+        &.#{$media}-show,
         &.#{$default-class}-hide {
             display: inline !important;
         }
