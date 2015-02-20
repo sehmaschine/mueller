@@ -1,0 +1,27 @@
+{
+  "name": "mueller",
+  "version": "1.2.0",
+  "description": "MUELLER is a modular grid system for responsive/adaptive and non–responsive layouts, based on Sass/Compass.",
+  "main": "sass/grid/_grid-system.scss",
+  "keywords": ["layout", "grid", "sass", "compass", "responsive", "adaptive", "rwd"],
+  "authors": [
+    {"name": "Patrick Kranzlmueller", "email": "sehmaschine@gmail.com"," homepage": "http://vonautomatisch.at"},
+    {"name": "Axel Swoboda", "email": "parsch.inc@gmail.com"," homepage": "http://vonautomatisch.at"}
+  ],
+  "homepage": "http://muellergridsystem.com",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sehmaschine/mueller.git"
+  },
+  "ignore": [
+    "**/.*",
+    "*.json",
+    "*.py",
+    "*.pyc",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

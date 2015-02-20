@@ -1,0 +1,5 @@
+{
+  "name": "mueller",
+  "description": "MUELLER is a modular grid system for responsive/adaptive and non–responsive layouts, based on Sass/Compass.",
+  "tags": ["layout", "grid", "sass", "compass", "responsive", "adaptive", "rwd"]
+}
